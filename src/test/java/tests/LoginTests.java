@@ -40,4 +40,31 @@ public class LoginTests extends TestBase{
         Assert.assertTrue(app.getHelperUser().isLogged());
 
     }
+
+    @Test
+    public void loginWrongEmail(){
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationForm("marusyagmail.com","Mmar123456$");
+        app.getHelperUser().submitLogin();
+        Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password"));
+
+    }
+
+    @Test
+    public void loginWrongPassword(){
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationForm("marusya@gmail.com","Mm123");
+        app.getHelperUser().submitLogin();
+        Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password"));
+
+    }
+
+    @Test
+    public void loginUnregisteredUser(){
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationForm("agata@gmail.com","Aga123456$");
+        app.getHelperUser().submitLogin();
+        Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password"));
+
+    }
 }
