@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class HelperContact extends HelperBase{
+public class HelperContact extends HelperBase {
     public HelperContact(WebDriver wd) {
         super(wd);
     }
@@ -26,15 +26,15 @@ public class HelperContact extends HelperBase{
     }
 
     public void saveContact() {
-//        getScreenElement("src/test/screenshots/screen-btn.png",By.cssSelector(".add_form__2rsm2>button"));
+        getScreenElement("src/test/screenshots/screen-btn.png", By.cssSelector(".add_form__2rsm2>button"));
         click(By.cssSelector(".add_form__2rsm2>button"));
 
     }
 
     public boolean isContactAddedByName(String name) {
-        List<WebElement> list =wd.findElements(By.cssSelector("h2"));
-        for (WebElement el:list) {
-            if( el.getText().equals(name)){
+        List<WebElement> list = wd.findElements(By.cssSelector("h2"));
+        for (WebElement el : list) {
+            if (el.getText().equals(name)) {
                 return true;
             }
         }
@@ -42,10 +42,10 @@ public class HelperContact extends HelperBase{
     }
 
     public boolean isContactAddedByPhone(String phone) {
-        List<WebElement> list =wd.findElements(By.cssSelector("h3"));
+        List<WebElement> list = wd.findElements(By.cssSelector("h3"));
 
-        for(WebElement el:list){
-            if(el.getText().equals(phone)){
+        for (WebElement el : list) {
+            if (el.getText().equals(phone)) {
                 return true;
             }
         }
@@ -55,7 +55,6 @@ public class HelperContact extends HelperBase{
     public boolean isAddPageStillDisplayed() {
         return isElementPresent(By.cssSelector("a.active[href='/add']"));
     }
-
 
 
 //    public int removeOneContact() {
@@ -83,7 +82,7 @@ public class HelperContact extends HelperBase{
 //            removeContact();
 //        }
 
-    }
+}
 
 //    public void provideContacts()
 //    {

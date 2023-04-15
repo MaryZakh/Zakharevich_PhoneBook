@@ -56,7 +56,7 @@ public class AddNewContact extends TestBase {
     }
 
     @Test
-    public void addNewContactWrongName(){
+    public void addNewContactWrongName() {
         Contact contact = Contact.builder()
                 .name("")
                 .lastName("Stark")
@@ -67,12 +67,13 @@ public class AddNewContact extends TestBase {
                 .build();
         app.helperContact().openContactForm();
         app.helperContact().fillContactForm(contact);
-        // app.helperContact().pause(15000);
+        //app.helperContact().pause(15000);
         app.helperContact().saveContact();
         Assert.assertTrue(app.helperContact().isAddPageStillDisplayed());
-}
+    }
+
     @Test
-    public void  addNewContactWrongAddress(){
+    public void addNewContactWrongAddress() {
         Contact contact = Contact.builder()
                 .name("Tony")
                 .lastName("Stark")
@@ -89,8 +90,8 @@ public class AddNewContact extends TestBase {
     }
 
     @Test
-    public void addNewContactWrongLastName(){
-        int i= new Random().nextInt(1000)+1000;
+    public void addNewContactWrongLastName() {
+        int i = new Random().nextInt(1000) + 1000;
         Contact contact = Contact.builder()
                 .name("Tony")
                 .lastName("")
@@ -101,12 +102,13 @@ public class AddNewContact extends TestBase {
                 .build();
         app.helperContact().openContactForm();
         app.helperContact().fillContactForm(contact);
-       // app.helperContact().getScreen("src/test/screenshots/screen-"+i+".png");
+        app.helperContact().getScreen("src/test/screenshots/screen-" + i + ".png");
         app.helperContact().saveContact();
         Assert.assertTrue(app.helperContact().isAddPageStillDisplayed());
     }
+
     @Test
-    public void addNewContactWrongPhone(){
+    public void addNewContactWrongPhone() {
         Contact contact = Contact.builder()
                 .name("Tony")
                 .lastName("Stark")
@@ -123,8 +125,9 @@ public class AddNewContact extends TestBase {
 
 
     }
+
     @Test
-    public void addNewContactWrongEmail(){
+    public void addNewContactWrongEmail() {
         Contact contact = Contact.builder()
                 .name("Tony")
                 .lastName("Stark")
