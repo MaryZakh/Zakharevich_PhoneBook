@@ -1,10 +1,14 @@
 package manager;
 
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.List;
 
 public class HelperBase {
@@ -33,4 +37,19 @@ public class HelperBase {
         List<WebElement> list =wd.findElements(locator);
         return list.size()>0;
     }
+    public boolean isAlertPresent(String message) {
+        WebDriverWait wait = new WebDriverWait(wd, Duration.ofSeconds(5));
+        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+        if (alert != null && alert.getText().equals(message)) {
+            System.out.println(alert.getText());
+            //click Ok
+            //pause
+            alert.accept();
+            //click cancel------>alert.dismiss();
+            //type into alert------> alert.sendKeys("hello");
+            return true;
+        }
+        return false;
+    }
+
 }
