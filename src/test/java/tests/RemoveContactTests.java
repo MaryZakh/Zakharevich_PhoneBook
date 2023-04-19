@@ -1,5 +1,6 @@
 package tests;
 
+import com.beust.ah.A;
 import models.User;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -11,18 +12,20 @@ public class RemoveContactTests extends TestBase {
     public void preCondition() {
         if (!app.getHelperUser().isLogged()) {
             app.getHelperUser().login(new User().withEmail("marusya@gmail.com").withPassword("Mmar123456$"));
+            app.helperContact().provideContacts();
         }
-//        app.helperContact().provideContacts();//if less then 3 ===> add 3 contacts
+
     }
 
     @Test
-    public void removeFirstContact(){
+    public void removeFirstContact() {
         Assert.assertEquals(app.helperContact().removeOneContact(), 1);
     }
 
     @Test
-    public void removeAllContacts(){
-
+    public void removeAllContacts() {
+        app.helperContact().removeAllContacts();
+        Assert.assertEquals(app.getHelperUser().getMessage(), "No Contacts here!");
     }
 
 }

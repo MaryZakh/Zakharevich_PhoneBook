@@ -17,16 +17,20 @@ public class RegistrationTests extends TestBase{
     }
 
     @Test
-    public void RegistrationSuccess(){
-        Random r = new Random();
-        int i = r.nextInt(10000)+1000 ;
-        User user = new User().withEmail("fon"+i+"@gmail.com").withPassword("Fon12345$");
+    public void registrationSuccess(){
+        Random random = new Random();
+        int i = random.nextInt(1000)+1000;
+        User user = new User().withEmail("don"+i+"@gmail.com").withPassword("Don12345$");
+        logger.info("Tests run with data: --->"+user.toString());
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm(user);
         app.getHelperUser().submitRegistration();
 
-        Assert.assertTrue(app.getHelperUser().isLogged());
+        // Assert.assertTrue(app.getHelperUser().isLogged());
+        Assert.assertTrue(app.getHelperUser().isLogged(),"check is sing out present");
         Assert.assertTrue(app.getHelperUser().isNoContactsHereDisplayed());
+        Assert.assertEquals(app.getHelperUser().getMessage(),"No Contacts here!");
+
 
     }
 
