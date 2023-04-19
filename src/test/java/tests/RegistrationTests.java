@@ -37,6 +37,7 @@ public class RegistrationTests extends TestBase{
     @Test
     public void RegistrationWrongEmail(){
         User user = new User().withEmail("fongmail.com").withPassword("Fon12345$");
+        logger.info("Tests run with data: --->"+user.toString());
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm(user);
         app.getHelperUser().submitRegistration();
@@ -47,6 +48,7 @@ Assert.assertTrue(app.getHelperUser().isAlertPresent2("Wrong email or password")
     @Test
     public void RegistrationWrongPassword(){
         User user = new User().withEmail("marusya@gmail.com").withPassword("Mmar123456$");
+        logger.info("Tests run with data: --->"+user.toString());
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm(user);
         app.getHelperUser().submitRegistration();
@@ -57,6 +59,7 @@ Assert.assertTrue(app.getHelperUser().isAlertPresent2("Wrong email or password")
     @Test
     public void RegistrationExistUser(){
         User user = new User().withEmail("fon@gmail.com").withPassword("Fon12$");
+        logger.info("Tests run with data: --->"+user.toString());
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm(user);
         app.getHelperUser().submitRegistration();

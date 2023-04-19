@@ -76,6 +76,7 @@ public class HelperContact extends HelperBase {
     }
 
     private int countOfContacts() {
+
         return wd.findElements(By.cssSelector(".contact-item_card__2SOIM")).size();
     }
 
@@ -90,13 +91,11 @@ public class HelperContact extends HelperBase {
 
 
 
-    public void provideContacts()
-    {
+    public void provideContacts() {
         if(countOfContacts()<3){
             for (int i = 0; i < 3; i++) {
                 addOneContact();
             }
-
         }
     }
 
@@ -113,6 +112,6 @@ public class HelperContact extends HelperBase {
         openContactForm();
         fillContactForm(contact);
         saveContact();
-        pause(500);
+        pause(1000);
     }
 }

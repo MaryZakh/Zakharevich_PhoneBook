@@ -12,8 +12,8 @@ public class RemoveContactTests extends TestBase {
     public void preCondition() {
         if (!app.getHelperUser().isLogged()) {
             app.getHelperUser().login(new User().withEmail("marusya@gmail.com").withPassword("Mmar123456$"));
-            app.helperContact().provideContacts();
         }
+        app.helperContact().provideContacts();
 
     }
 
