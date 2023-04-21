@@ -1,0 +1,25 @@
+14:52:14.567  INFO  manager.ApplicationManager - All tests run in Chrome Browser
+14:52:17.612  INFO  manager.ApplicationManager - The link --->https://telranedu.web.app/home
+14:52:17.646  INFO  tests.TestBase - Name of method --->loginSuccessModel
+14:52:17.648  INFO  manager.ListenerWD - Before Find Elements--->By.xpath: //button[text()='Sign Out']
+14:52:22.690  INFO  manager.ListenerWD - After Find Elements--->By.xpath: //button[text()='Sign Out']
+14:52:22.690  INFO  manager.ListenerWD - List of elements is--->0
+14:52:22.690  INFO  tests.TestBase - Test data---->email:'marusya@gmail.com' & password: 'Mmar123456$'
+14:52:22.706  INFO  manager.ListenerWD - Before Find Element --->By.cssSelector: a[href='/login']
+14:52:22.752  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: a[href='/login']
+14:52:22.786  INFO  manager.ListenerWD - Location of element -->(1426, 34)
+14:52:22.846  INFO  manager.ListenerWD - Before Find Element --->By.name: email
+14:52:22.890  INFO  manager.ListenerWD - After Find Element--->By.name: email
+14:52:22.918  INFO  manager.ListenerWD - Location of element -->(568, 250)
+14:52:23.215  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //input[la]
+14:52:28.288  INFO  manager.ListenerWD - Huston we have a problem!
+14:52:28.288  INFO  manager.ListenerWD - Object target --->ChromeDriver: chrome on WINDOWS (d06005d0094a906052490919e5023872)
+14:52:28.288  INFO  manager.ListenerWD - ************
+14:52:28.288  INFO  manager.ListenerWD - Method method ---->findElement
+14:52:28.288  INFO  manager.ListenerWD - ************
+14:52:28.288  INFO  manager.ListenerWD - InvocationTargetExceptionjava.lang.reflect.InvocationTargetException
+14:52:28.288  INFO  manager.ListenerWD - ************
+14:52:28.292  INFO  manager.ListenerWD - InvocationTargetException1null
+14:52:28.292  INFO  manager.ListenerWD - ************
+14:52:28.292  INFO  manager.ListenerWD - InvocationTargetException2java.lang.reflect.InvocationTargetException
+14:52:28.292  INFO  manager.ListenerWD - ************

@@ -1,0 +1,23 @@
+14:35:54.587  INFO  manager.ApplicationManager - All tests run in Chrome Browser
+14:35:57.432  INFO  manager.ApplicationManager - The link --->https://telranedu.web.app/home
+14:35:57.476  INFO  tests.TestBase - Name of method --->loginSuccessModel
+14:35:57.479  INFO  manager.ListenerWD - Before Find Elements--->By.xpath: //button[text()='Sign Out']
+14:36:02.540  INFO  manager.ListenerWD - After Find Elements--->By.xpath: //button[text()='Sign Out']
+14:36:02.556  INFO  manager.ListenerWD - List of elements is--->0
+14:36:02.556  INFO  tests.TestBase - Test data---->email:'marusya@gmail.com' & password: 'Mmar123456$'
+14:36:02.556  INFO  manager.ListenerWD - Before Find Element --->By.cssSelector: a[href='/login']
+14:36:02.603  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: a[href='/login']
+14:36:02.635  INFO  manager.ListenerWD - Location of element -->(1426, 34)
+14:36:02.695  INFO  manager.ListenerWD - Before Find Element --->By.name: email
+14:36:02.744  INFO  manager.ListenerWD - After Find Element--->By.name: email
+14:36:02.759  INFO  manager.ListenerWD - Location of element -->(568, 250)
+14:36:02.984  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //input[last()]
+14:36:03.030  INFO  manager.ListenerWD - After Find Element--->By.xpath: //input[last()]
+14:36:03.038  INFO  manager.ListenerWD - Location of element -->(568, 320)
+14:36:03.259  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //button[text()='Login']
+14:36:03.299  INFO  manager.ListenerWD - After Find Element--->By.xpath: //button[text()='Login']
+14:36:03.318  INFO  manager.ListenerWD - Location of element -->(568, 390)
+14:36:03.381  INFO  manager.ListenerWD - Before Find Elements--->By.xpath: //button[text()='Sign Out']
+14:36:05.398  INFO  manager.ListenerWD - After Find Elements--->By.xpath: //button[text()='Sign Out']
+14:36:05.398  INFO  manager.ListenerWD - List of elements is--->1
+14:36:05.398  INFO  tests.TestBase - Assert check is Element button 'Sign out' present
