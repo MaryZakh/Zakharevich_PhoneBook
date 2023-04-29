@@ -9,14 +9,14 @@ import java.util.Iterator;
 import java.util.List;
 
 public class DataProviderContact {
-
+//**************************
     @DataProvider
     public Iterator<Object[]> example() {
         List<Object[]> list = new ArrayList<>();
 
         return list.iterator();
     }
-
+//******************************************
 
     @DataProvider
     public Iterator<Object[]> contactWrongPhone() {
